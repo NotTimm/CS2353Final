@@ -1,0 +1,3 @@
+/mnt/c/Users/gamer/Desktop/2353Final/cmake-build-debug/CMakeFiles/2353Final.dir
+/mnt/c/Users/gamer/Desktop/2353Final/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/gamer/Desktop/2353Final/cmake-build-debug/CMakeFiles/rebuild_cache.dir
