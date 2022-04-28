@@ -21,6 +21,9 @@ std::vector<int> unionize(std::vector<int>& left, std::vector<int>& right)
         else
             out.push_back(i);
     }
+    for (int i = 0; i < out.size(); ++i) {
+        cout << out.at(i);
+    }
     return out;
 }
 
@@ -31,6 +34,9 @@ std::vector<int> intersect(std::vector<int>& left, std::vector<int>& right)
     {
         if(std::count(right.begin(), right.end(), i))
             out.push_back(i);
+    }
+    for (int i = 0; i < out.size(); ++i) {
+        cout << out.at(i);
     }
     return out;
 }
@@ -45,12 +51,13 @@ std::vector<int> difference(std::vector<int>& left, std::vector<int>& toSubtract
         else
             out.push_back(i);
     }
+    for (int i = 0; i < out.size(); ++i) {
+        cout << out.at(i);
+    }
     return out;
 }
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-
     // reading in the file and adding to the two vectors
     ifstream inFS;
     inFS.open("../sets.txt");
