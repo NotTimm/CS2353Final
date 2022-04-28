@@ -21,10 +21,8 @@ std::vector<int> unionize(std::vector<int>& left, std::vector<int>& right)
         else
             out.push_back(i);
     }
-    for (int i = 0; i < out.size(); ++i) {
-        cout << out.at(i);
-    }
     return out;
+
 }
 
 std::vector<int> intersect(std::vector<int>& left, std::vector<int>& right)
@@ -34,9 +32,6 @@ std::vector<int> intersect(std::vector<int>& left, std::vector<int>& right)
     {
         if(std::count(right.begin(), right.end(), i))
             out.push_back(i);
-    }
-    for (int i = 0; i < out.size(); ++i) {
-        cout << out.at(i);
     }
     return out;
 }
@@ -50,9 +45,6 @@ std::vector<int> difference(std::vector<int>& left, std::vector<int>& toSubtract
             continue;
         else
             out.push_back(i);
-    }
-    for (int i = 0; i < out.size(); ++i) {
-        cout << out.at(i);
     }
     return out;
 }
@@ -81,6 +73,19 @@ int main() {
         left.push_back(stod(set1Values));
         getline(lineSS, set2Values, ' ');
         right.push_back(stod(set2Values));
+
+        // printing the final sets
+        for (int i = 0; i < unionize.size(); ++i) {
+            cout << "Union Set: " << unionize.at(i).at(i) << endl;
+        }
+
+        for (int i = 0; i < difference.size(); ++i) {
+            cout << "Difference Set: " << difference.at(i).at(i) << endl;
+        }
+
+        for (int i = 0; i < intersect.size(); ++i) {
+            cout << "Intersect Set: " << intersect.at(i).at(i) << endl;
+        }
 
         return 0;
     }
